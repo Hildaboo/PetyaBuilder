@@ -1,3 +1,8 @@
+2021 note:
+This is my OG reverse of the leaked petya builder kit, sorry if formatting is fucked up but deal with it.
+You can find the leaked copy on the root of this project.
+
+===============================================================
 UPDATE June 2019 RELEASE 1.1:
 
 Fixed and cleaned the shotty decompile from October 25th 2018.
