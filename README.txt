@@ -1,6 +1,7 @@
 2021 note:
 This is my OG reverse of the leaked petya builder kit, sorry if formatting is fucked up but deal with it.
 You can find the leaked copy on the root of this project.
+- thanks to VXUG for posting it too! please follow them on twitter, https://twitter.com/vxunderground
 
 ===============================================================
 UPDATE June 2019 RELEASE 1.1:
